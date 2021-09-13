@@ -1,0 +1,42 @@
+.img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    width: 70%; 
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: transform .2s; 
+}
+
+.img:hover {
+    transform: scale(1.5); 
+}
+
+.nav {
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+    background-color: #281C49;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: #695899;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.btn {
+    background-color: tomato;
+}

@@ -6,10 +6,10 @@ const initialState = {
     apod: []
 }
 
-function reducer(state = initialState, action){
+function reducer(state = initialState, action) {
     switch (action.type) {
         case APOD:
-            return{
+            return {
                 ...state,
                 apod: action.payload
             }
