@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getApod } from '../actions/index'
+import mediumZoom from 'medium-zoom'
+import ImageZoom from './ImageZoom'
 import './Home.css'
 
 function Home() {
     const dispatch = useDispatch()
+    const zoom = React.useRef(mediumZoom())
     const apod = useSelector(state => state.apod)
+    const loading = useSelector(state => state.loading)
+    const error = useSelector(state => state.error)
     const [date, setDate] = useState('')
 
     useEffect(() => {
@@ -28,15 +33,23 @@ function Home() {
                     <input className="form-control mr-sm-2" type="text" placeholder="yyyy-mm-dd" onChange={handleDate} value={date} />
                     <button onClick={handleSubmit} className="btn">Get photo of the day</button>
                 </nav>
+                <div className="error">
+                {error !== "" && <p>{error}</p>}
+                </div>
             </div>
             <div>
                 <div className="card">
                     <div className="row align-items-center">
                         <div className="col">
-                            <img src={apod.hdurl ? apod.hdurl : <p>Image not found</p>} className="img" />
+                            <ImageZoom
+                                src={apod.hdurl ? apod.hdurl : <p>Image not found</p>}                        
+                                loading={loading && <p>loading...</p>}
+                                zoom={zoom.current}
+                                background="#130D24"
+                            />
                         </div>
                         <div className="container col">
-                            <h2>{apod.title}</h2>
+                            <h2>{apod.title ? apod.title : <p>Title not found</p>}</h2>
                             <h4>Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
                             <h5>{apod.date}</h5>
                             <p>{apod.explanation}</p>

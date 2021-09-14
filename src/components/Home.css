@@ -1,4 +1,4 @@
-.img {
+img {
     max-width: 100%;
     width: 100%;
     display: block;
@@ -8,6 +8,10 @@
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
 } 
 
+.error {
+    color: #806cb8;
+    text-align: center;
+}
 
 .nav {
     justify-content: center;
