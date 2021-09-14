@@ -25,24 +25,23 @@ function Home() {
         <div>
             <div>
                 <nav className="form-inline nav">
-                <input className="mr-sm-2" aria-label="Search" type="text" placeholder="Date" onChange={handleDate} value={date}/><button onClick={handleSubmit} className="btn btn-outline-success my-2 my-sm-0">Get photo of the day</button> 
-           </nav>
-            </div> 
-{/*             <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand"><img src="../images/nasa-logo.png"/></a>
-                    <input class="form-control mr-sm-2" type="text" placeholder="Date" onChange={handleDate} value={date} />
-                    <button class="btn" onClick={handleSubmit}>Get photo of the day</button>
-
-            </nav> */}
+                    <input className="form-control mr-sm-2" type="text" placeholder="yyyy-mm-dd" onChange={handleDate} value={date} />
+                    <button onClick={handleSubmit} className="btn">Get photo of the day</button>
+                </nav>
+            </div>
             <div>
                 <div className="card">
-                <h1>{apod.title}</h1>
-                <h1>{apod.copyright}</h1>
-                <h3>{apod.date}</h3>
-                <img src={apod.hdurl} className="img" />
-                <div className="container">
-                <p>{apod.explanation}</p>
-                </div>
+                    <div className="row align-items-center">
+                        <div className="col">
+                            <img src={apod.hdurl ? apod.hdurl : <p>Image not found</p>} className="img" />
+                        </div>
+                        <div className="container col">
+                            <h2>{apod.title}</h2>
+                            <h4>Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
+                            <h5>{apod.date}</h5>
+                            <p>{apod.explanation}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

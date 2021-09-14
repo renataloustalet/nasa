@@ -1,17 +1,13 @@
 .img {
-    width: 100%;
     max-width: 100%;
-    height: auto;
-    width: 70%; 
+    width: 100%;
     display: block;
     margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
-    transition: transform .2s; 
-}
+    height: auto;
+    align-items: center;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
+} 
 
-.img:hover {
-    transform: scale(1.5); 
-}
 
 .nav {
     justify-content: center;
@@ -22,21 +18,28 @@
 .card {
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    width: 70%;
-    align-self: center;
-    justify-self: center;
+    width: 80%;
     background-color: #281C49;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    color: #695899;
-    padding: 10px;
+    color: #806cb8;
+    padding: 25px;
     text-align: center;
 }
 
 .container {
-    padding-top: 10px;
+    align-items: center;
+    display: grid;
+    height: auto;
+}
+
+.btn:hover {
+    background-color: #5B4B87;
+    color: #F1F0F0;
 }
 
 .btn {
-    background-color: tomato;
+    display: block;
+    background-color: #392a61;
+    color: #806cb8;
+    transition-duration: 0.5s;
 }
