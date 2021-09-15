@@ -34,7 +34,8 @@ function Home() {
                     <button onClick={handleSubmit} className="btn">Get photo of the day</button>
                 </nav>
                 <div className="error">
-                {error !== "" && <p>{error}</p>}
+                    {error !== "" && <p>{error}</p>}
+                    {loading && <p>Loading...</p>}
                 </div>
             </div>
             <div>
@@ -42,8 +43,7 @@ function Home() {
                     <div className="row align-items-center">
                         <div className="col">
                             <ImageZoom
-                                src={apod.hdurl ? apod.hdurl : <p>Image not found</p>}                        
-                                loading={loading && <p>loading...</p>}
+                                src={apod.hdurl ? apod.hdurl : <p>Image not found</p>}
                                 zoom={zoom.current}
                                 background="#130D24"
                             />
