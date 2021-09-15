@@ -1,6 +1,6 @@
 # APOD: Astronomy Picture of the Day
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto realizado para fines prácticos
 
 ### `npm start`
 
