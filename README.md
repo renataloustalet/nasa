@@ -16,4 +16,10 @@ You will also see any lint errors in the console.
 
 ## Tecnologías utilizadas 
 
+<ul>
+    <li>React - Redux</li>
+    <li>Bootstrap</li>
+</ul>
+
+## Previews
 
