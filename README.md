@@ -1,9 +1,8 @@
-# APOD: Astronomy Picture of the Day
+# Astronomy Picture of the Day (APOD)
 
-Proyecto realizado para fines prácticos
+Proyecto realizado para fines prácticos.
 
-### `npm start`
-
+Realicé un sitio web utilizando la API de la NASA 
 
 ## Tecnologías utilizadas 
 
