@@ -1,8 +1,6 @@
 # Astronomy Picture of the Day (APOD)
 
-Proyecto realizado para fines prácticos.
-
-Realicé un sitio web utilizando la API de la NASA 
+Este proyecto fue realizado para fines prácticos, un sitio web de la imagen astronómica del día la utilizando la API de la NASA. Permite buscarlas por fecha.
 
 ## Tecnologías utilizadas 
 
