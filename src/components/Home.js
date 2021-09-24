@@ -15,7 +15,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getApod(date))
-    }, [])
+    }, [dispatch])
 
     function handleDate(e) {
         setDate(e.target.value)

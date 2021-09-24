@@ -5,10 +5,11 @@ body {
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;  
     -webkit-font-smoothing: antialiased;
-  } 
+}
 
 img {
     max-width: 100%;
+    width: 100%;
     display: block;
     margin: auto;
     height: auto;
@@ -21,21 +22,21 @@ img {
     text-align: center;
 }
 
-.navbar-expand {
-    margin-right: 6%;
-    margin-left: 6%;
-}
-
-.navbar-expand input[type=text] {
-    margin-right: 2%;
-}
-
 .nav {
     justify-content: center;
     margin-top: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
     padding: 20px;
+}
+
+.navbar-expand {
+    padding: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0.90%;
+}
+
+.navbar-expand input[type="text"]{
+    margin-right: 2%;
 }
 
 .card {
@@ -59,4 +60,4 @@ img {
     background-color: #392a61;
     color: #806cb8;
     transition-duration: 0.5s;
-} 
+}
