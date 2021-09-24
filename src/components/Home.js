@@ -15,7 +15,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getApod(date))
-    }, [dispatch])
+    }, [])
 
     function handleDate(e) {
         setDate(e.target.value)
@@ -29,7 +29,7 @@ function Home() {
     return (
         <div>
             <div>
-                <nav className="form-inline nav">
+                <nav className="form-inline nav navbar-expand">
                     <input className="form-control mr-sm-2" type="text" placeholder="yyyy-mm-dd" onChange={handleDate} value={date} />
                     <button onClick={handleSubmit} className="btn">Get photo of the day</button>
                 </nav>
@@ -39,7 +39,7 @@ function Home() {
                 </div>
             </div>
             <div>
-                <div className="card">
+            <div className="card">
                     <div className="row align-items-center">
                         <div className="col">
                             <ImageZoom
@@ -48,11 +48,13 @@ function Home() {
                                 background="#130D24"
                             />
                         </div>
-                        <div className="container col">
-                            <h2>{apod.title ? apod.title : <p>Title not found</p>}</h2>
-                            <h4>Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
-                            <h5>{apod.date}</h5>
-                            <p>{apod.explanation}</p>
+                        <div className="col-md-8">
+                            <div className="card-body">
+                            <h2 className="card-title">{apod.title ? apod.title : <p>Title not found</p>}</h2>
+                            <h4 className="card-text">Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
+                            <h5 className="card-text">{apod.date}</h5>
+                            <p className="card-text">{apod.explanation}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
