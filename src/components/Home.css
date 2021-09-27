@@ -38,7 +38,6 @@ img {
     padding: 1%;
     margin-right: 10%;
     margin-left: 10%;
-    margin-bottom: 1%;
     margin-top: 1%;
 }
 
@@ -55,6 +54,7 @@ img {
     color: #806cb8;
     padding: 25px;
     text-align: center;
+    margin-top: 1%;
 }
 
 .btn:hover {
