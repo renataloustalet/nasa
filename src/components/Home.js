@@ -50,7 +50,7 @@ function Home() {
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <h2 className="card-title">{apod.title ? apod.title : <p>Title not found</p>}</h2>
+                                <h2 className="card-title">{apod.title}</h2>
                                 <h4 className="card-text">Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
                                 <h5 className="card-text">{apod.date}</h5>
                                 <p className="card-text">{apod.explanation}</p>
