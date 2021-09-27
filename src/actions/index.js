@@ -12,7 +12,7 @@ export function getApod(date) {
             type: APOD_START
         })
         try {
-            const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=KAOnW0rZfgJYNSGq9H6Jj7XiIJJtdVhDfivrZKKF&date=${date}`)
+            const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}`)
             return dispatch({
                 type: APOD,
                 payload: res.data

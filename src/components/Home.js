@@ -13,6 +13,8 @@ function Home() {
     const error = useSelector(state => state.error)
     const [date, setDate] = useState('')
 
+    console.log(process.env)
+
     useEffect(() => {
         dispatch(getApod(date))
     }, [dispatch])
@@ -28,6 +30,7 @@ function Home() {
 
     return (
         <div>
+            <h1>Astronomy Picture of the Day</h1>
             <div>
                 <nav className="form-inline nav navbar-expand">
                     <input className="form-control mr-sm-2" type="text" placeholder="yyyy-mm-dd" onChange={handleDate} value={date} />
