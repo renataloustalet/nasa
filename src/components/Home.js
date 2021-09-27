@@ -13,8 +13,6 @@ function Home() {
     const error = useSelector(state => state.error)
     const [date, setDate] = useState('')
 
-    console.log(process.env)
-
     useEffect(() => {
         dispatch(getApod(date))
     }, [dispatch])
