@@ -44,7 +44,7 @@ function Home() {
                     <div className="row align-items-center">
                         <div className="col">
                             <ImageZoom
-                                src={apod.hdurl ? apod.hdurl : <p>Image not found</p>}
+                                src={apod.hdurl}
                                 zoom={zoom.current}
                                 background="#130D24"
                             />
@@ -52,7 +52,7 @@ function Home() {
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h2 className="card-title">{apod.title}</h2>
-                                <h4 className="card-text">Copyright: {apod.copyright ? apod.copyright : <p> not available </p>}</h4>
+                                <h4 className="card-text">{apod.copyright}</h4>
                                 <h5 className="card-text">{apod.date}</h5>
                                 <p className="card-text">{apod.explanation}</p>
                             </div>
