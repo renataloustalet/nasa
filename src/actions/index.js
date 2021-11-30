@@ -3,13 +3,13 @@ import axios from 'axios'
 import {
     APOD,
     APOD_FAILURE,
-    APOD_START
+    LOADING
 } from './constantes'
 
 export function getApod(date) {
     return async function (dispatch) {
         dispatch({
-            type: APOD_START
+            type: LOADING
         })
         try {
             const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}`)

@@ -1,13 +1,13 @@
 import {
     APOD,
-    APOD_START,
+    LOADING,
     APOD_FAILURE
 } from '../actions/constantes'
 
 const initialState = {
     apod: [],
-    loading: false,
-    error: ""
+    error: "",
+    loading: false
 }
 
 function reducer(state = initialState, action) {
@@ -16,20 +16,17 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 apod: action.payload,
-                error: "",
                 loading: false
             }
-        case APOD_START:
+        case LOADING:
             return {
                 ...state,
-                error: "",
                 loading: true
             }
         case APOD_FAILURE:
             return {
                 ...state,
-                error: action.payload,
-                loading: false
+                error: action.payload
             }
         default: return state
     }

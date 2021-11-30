@@ -12,6 +12,7 @@ h1 {
     text-align: center;
     color: #806cb8;
     margin-top: 1%;
+    float: left;
 }
 
 img {
@@ -32,14 +33,12 @@ img {
 .nav {
     justify-content: center;
     margin-top: auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .navbar-expand {
-    padding: 1%;
     margin-right: 10%;
     margin-left: 10%;
-    margin-top: 1%;
 }
 
 .navbar-expand input[type="text"]{
@@ -56,11 +55,7 @@ img {
     padding: 25px;
     text-align: center;
     margin-top: 1%;
-}
-
-.btn:hover {
-    background-color: #5B4B87;
-    color: #F1F0F0;
+    margin-bottom: 1%;
 }
 
 .btn {
@@ -68,4 +63,9 @@ img {
     background-color: #392a61;
     color: #806cb8;
     transition-duration: 0.5s;
+}
+
+.btn:hover {
+    background-color: #5B4B87;
+    color: #F1F0F0;
 }
