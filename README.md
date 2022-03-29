@@ -5,7 +5,7 @@
 <ul>
     <li>Javascript</li>
     <li>React - Redux</li>
-    <li>Bootstrap</li>
+    <li>Tailwind css</li>
 </ul>
 
 ## Previews
